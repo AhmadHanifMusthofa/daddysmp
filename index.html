@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DaddySMP - Minecraft Server Indonesia</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+        color: white;
+      }
+
+      nav {
+        position: sticky;
+        top: 0;
+        background: #111;
+        padding: 15px 30px;
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+        z-index: 999;
+        border-bottom: 2px solid #00ff99;
+      }
+
+      nav a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      header {
+        padding: 40px 20px;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.5);
+      }
+
+      header h1 {
+        font-size: 2.8rem;
+        color: #00ff99;
+        margin-bottom: 10px;
+      }
+
+      header p {
+        font-size: 1.2rem;
+        color: #ccc;
+      }
+
+      .logo {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 3px solid #00ff99;
+        margin-bottom: 10px;
+      }
+
+      .hero {
+        padding: 100px 20px;
+        text-align: center;
+        background: url("assets/bg.png") no-repeat center center/cover;
+      }
+
+      .hero h2 {
+        font-size: 2.2rem;
+        margin-bottom: 10px;
+        text-shadow: 2px 2px 5px #000;
+      }
+
+      .hero .ip-box {
+        background: rgba(0, 0, 0, 0.6);
+        display: inline-block;
+        padding: 10px 20px;
+        margin-top: 15px;
+        border-radius: 8px;
+        font-size: 1.1rem;
+        cursor: pointer;
+      }
+
+      .copy-btn {
+        margin-top: 10px;
+        background-color: #00ff99;
+        border: none;
+        padding: 10px 16px;
+        border-radius: 6px;
+        font-weight: bold;
+        cursor: pointer;
+        color: #000;
+      }
+
+      .copy-btn:hover {
+        background-color: #00cc77;
+      }
+
+      section {
+        padding: 80px 20px;
+        max-width: 1000px;
+        margin: 40px auto 0;
+      }
+
+      section h3 {
+        font-size: 1.8rem;
+        color: #00ff99;
+        margin-bottom: 30px;
+        text-align: center;
+      }
+
+      section p {
+        text-align: center;
+        color: #ddd;
+        line-height: 1.6;
+      }
+
+      ul.features {
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 30px;
+        margin-top: 30px;
+      }
+
+      ul.features li {
+        background: #1c1c1c;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        border-left: 4px solid #00ff99;
+      }
+
+      #staff .staff-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+        margin-top: 30px;
+      }
+
+      .staff-card {
+        background: #1c1c1c;
+        padding: 20px;
+        border-radius: 10px;
+        width: 200px;
+        text-align: center;
+        border-left: 4px solid #00ff99;
+      }
+
+      .staff-card h4 {
+        margin-bottom: 5px;
+      }
+
+      .staff-card p {
+        color: #aaa;
+      }
+
+      footer {
+        text-align: center;
+        padding: 30px 20px;
+        background: #111;
+        color: #aaa;
+        font-size: 0.9rem;
+        margin-top: 60px;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="#beranda">Beranda</a>
+      <a href="#tentang">Tentang</a>
+      <a href="#fitur">Fitur</a>
+      <a href="#staff">Staff</a>
+      <a href="#ip">IP</a>
+      <a href="https://discord.gg/syzDZace" target="_blank">Discord</a>
+    </nav>
+
+    <header id="beranda">
+      <img src="assets/logo.jpg" alt="DaddySMP Logo" class="logo" />
+      <h1>DaddySMP</h1>
+      <p>Server Minecraft Survival • Klan War • Komunitas Asik</p>
+    </header>
+
+    <div class="hero">
+      <h2>Bergabung Sekarang dan Rasakan Petualangan Seru!</h2>
+      <div id="ip" class="ip-box" onclick="copyIP()">
+        Bedrock : <span id="ipText">daddysmp.net</span> | Port: 19132
+      </div>
+      <div id="ip" class="ip-box" onclick="copyIP()">
+        Java (Premium) : <span id="ipText">daddysmp.net:19132</span>
+      </div>
+      <br />
+      <button class="copy-btn" onclick="copyIP()">Salin IP</button>
+    </div>
+
+    <section
+      id="tentang"
+      style="
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+      "
+    >
+      <div style="flex: 1; min-width: 250px; text-align: center">
+        <img
+          src="assets/logo.jpg"
+          alt="Logo DaddySMP"
+          style="
+            width: 220px;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid #00ff99;
+            box-shadow: 0 0 20px #00ff99;
+          "
+        />
+      </div>
+      <div style="flex: 2; min-width: 300px">
+        <h3>Tentang DaddySMP</h3>
+        <p>
+          <strong>DaddySMP</strong> adalah server Minecraft survival Indonesia
+          yang menghadirkan pengalaman bermain menyenangkan, penuh tantangan,
+          dan komunitas yang ramah. Disini fokus pada klan atau tim untuk
+          membangun suatu kekuatan yg besar. Tidak lupa dengan sistem ekonomi
+          untuk pengalaman bermain yg realistis
+        </p>
+        <p>
+          Nikmati dunia Minecraft yang stabil, support Java & Bedrock, dengan
+          sistem Klan, Event, dan ekonomi yang seru!
+        </p>
+      </div>
+    </section>
+
+    <section id="fitur">
+      <h3>Fitur Unggulan</h3>
+      <ul class="features">
+        <li>🛡️ Proteksi Wilayah Anti-Grief</li>
+        <li>⚔️ Sistem Klan & Clan War</li>
+        <li>🎁 Event dengan Hadiah Menarik</li>
+        <li>💰 Ekonomi & Toko Antar Pemain</li>
+        <li>📱 Crossplay Java & Bedrock</li>
+        <li>🕹️ Aktif 24/7 Tanpa Whitelist</li>
+      </ul>
+    </section>
+
+    <section id="staff">
+      <h3>Tim Staff DaddySMP</h3>
+      <div class="staff-list">
+        <div class="staff-card">
+          <h4>Daddyel</h4>
+          <p>Owner</p>
+        </div>
+        <div class="staff-card">
+          <h4>Nifiez</h4>
+          <p>Admin</p>
+          <h6 style="color: #7e9dab">Creator This Web</h6>
+        </div>
+        <div class="staff-card">
+          <h4>Nasrul</h4>
+          <p>Admin</p>
+        </div>
+        <div class="staff-card">
+          <h4>Naomi</h4>
+          <p>Admin</p>
+        </div>
+        <div class="staff-card">
+          <h4>Kyzen</h4>
+          <p>Admin</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>© 2025 DaddySMP Website Creator: Nifiez</footer>
+
+    <script>
+      function copyIP() {
+        const ip = document.getElementById("ipText").textContent;
+        navigator.clipboard.writeText(ip).then(() => {
+          alert("IP disalin ke clipboard: " + ip);
+        });
+      }
+    </script>
+  </body>
+</html>
